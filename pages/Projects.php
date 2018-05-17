@@ -13,12 +13,12 @@
 
 		public function index()
 		{
-			echo "I'm index action";
+			echo "I'm Project's index action";
 		}
 
 		public function new()
 		{
-			echo "I'm new action";
+			echo "I'm Project's new action";
 		}
 
 	}
