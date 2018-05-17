@@ -1,24 +1,6 @@
-# Remove the question mark from the request but maintain the query string
-#RewriteEngine On
-#RewriteBase /routing/
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_FILENAME} !-l
-#RewriteRule ^(.*)$ index.php?$1 [L,QSA]
-
-
-
-
-
-
 RewriteEngine On
-
-# If you are in a subfolder, you don't need this:
-RewriteBase /routing/
-
+RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
-
-
-RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]
